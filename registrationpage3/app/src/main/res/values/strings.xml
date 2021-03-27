@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">registrationpage</string>
+    <string-array name="branches">
+        <item>Cse</item>
+        <item>ece</item>
+        <item>eee</item>
+        <item>It</item>
+    </string-array>
+</resources>
