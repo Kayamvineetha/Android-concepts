@@ -24,7 +24,7 @@ int count=0;
     }
     public void showToast(View view) {
         /*syntax of the toast message*/
-        Toast.makeText(this, "This is our first own app", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Result is"+count, Toast.LENGTH_SHORT).show();
     }
 
     public void showCount(View view) {
