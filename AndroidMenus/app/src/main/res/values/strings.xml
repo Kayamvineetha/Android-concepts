@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Android-Menus</string>
+    <string-array name="heroine_names">
+        <item>MotherTeresa</item>
+        <item>JhansiLakshmiBay</item>
+        <item>Rudramadevi</item>
+        <item>KiranBedy</item>
+    </string-array>
+</resources>
