@@ -12,6 +12,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -29,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.setTitle("DataFetching....");
         dialog.setMessage("Please wait....");
         dialog.show();
-        
+
         date=findViewById(R.id.tv_date);
         country=findViewById(R.id.tv_country);
         confirmed=findViewById(R.id.tv_confirmed);
@@ -55,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     String res_confirmed=rootobj.getString("Confirmed");
                     String res_deaths=rootobj.getString("Deaths");
                     country.setText("Country:"+res_country);
-                    date.setText("Date:"+res_date);
+                    date.setText("Date:"+properDateFormat(res_date));
                     active.setText("Active:"+res_activecases);
                     recovered.setText("Recovered:"+res_recovercases);
                     confirmed.setText("Confirmed:"+res_confirmed);
@@ -64,6 +68,24 @@ public class MainActivity extends AppCompatActivity {
                 catch (JSONException e) {
                     e.printStackTrace();
                 }
+                }
+
+
+
+            private String properDateFormat(String res_date){
+                String inputPattern="yy-mm-dd";
+                String outputPattern="dd-mm-yy";
+                SimpleDateFormat inputDate=new SimpleDateFormat(inputPattern);
+                SimpleDateFormat outputDate=new SimpleDateFormat(outputPattern);
+                Date d=null;
+                String str=null;
+                try {
+                    d=inputDate.parse(res_date);
+                    str=outputDate.format(d);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                return  str;
 
             }
 
