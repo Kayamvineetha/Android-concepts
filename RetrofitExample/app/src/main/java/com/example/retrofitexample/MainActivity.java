@@ -2,6 +2,7 @@ package com.example.retrofitexample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -17,11 +18,18 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     TextView date,country,confirmed,active,recovered,death;
+    ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        dialog=new ProgressDialog(this);
+        dialog.setTitle("DataFetching....");
+        dialog.setMessage("Please wait....");
+        dialog.show();
+        
         date=findViewById(R.id.tv_date);
         country=findViewById(R.id.tv_country);
         confirmed=findViewById(R.id.tv_confirmed);
@@ -33,8 +41,9 @@ public class MainActivity extends AppCompatActivity {
         c.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                Log.i("ding",response.body());
-                Toast.makeText(MainActivity.this,""+response.body(),Toast.LENGTH_SHORT).show();
+                dialog.cancel();
+                //Log.i("ding",response.body());
+               // Toast.makeText(MainActivity.this,""+response.body(),Toast.LENGTH_SHORT).show();
 
                 try {
                     JSONArray rootArray=new JSONArray(response.body());
