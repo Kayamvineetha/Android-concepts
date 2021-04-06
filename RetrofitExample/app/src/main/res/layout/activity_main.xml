@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Covid19 Reports!"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textColor="#E91E63"
+         />
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Date"
+        android:id="@+id/tv_date"
+    android:textSize="40sp"
+    android:gravity="center"
+    android:textColor="#9C27B0"
+    />
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Country"
+        android:id="@+id/tv_country"
+    android:textSize="40sp"
+    android:gravity="center"
+    android:textColor="#2196F3"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ConfirmedCases"
+        android:id="@+id/tv_confirmed"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textColor="#4CAF50"/>
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="ActiveCases"
+        android:id="@+id/tv_active"
+    android:textSize="40sp"
+    android:gravity="center"
+    android:textColor="#FFC107"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recovered"
+        android:id="@+id/tv_recovered"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textColor="#FF5722"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deaths"
+        android:id="@+id/tv_deaths"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textColor="#3F51B5"
+        />
+
+</LinearLayout>
