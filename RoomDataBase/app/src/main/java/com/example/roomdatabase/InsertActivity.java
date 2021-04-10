@@ -72,7 +72,19 @@ public class InsertActivity extends AppCompatActivity {
 
         String department=udept.getSelectedItem().toString();
 
-        Toast.makeText(this, nam+"\n"+mail_id+"\n"+ph_no+"\n"+roll_no+"\n"+gender+"\n"+department+"\n"
-                +sb.toString(), Toast.LENGTH_SHORT).show();
+        /*Toast.makeText(this, nam+"\n"+mail_id+"\n"+ph_no+"\n"+roll_no+"\n"+gender+"\n"+department+"\n"
+                +sb.toString(), Toast.LENGTH_SHORT).show();*/
+
+        Student student=new Student();
+        student.setName(nam);
+        student.setMailId(mail_id);
+        student.setPhoneNumber(ph_no);
+        student.setRollNumber(roll_no);
+        student.setGender(gender);
+        student.setLanguage(sb.toString());
+        student.setDepartment(department);
+        MainActivity.dataBase.myDao().insertStudent(student);
+        Toast.makeText(this, "Data Saved Successfully", Toast.LENGTH_SHORT).show();
+        finish();
     }
 }
