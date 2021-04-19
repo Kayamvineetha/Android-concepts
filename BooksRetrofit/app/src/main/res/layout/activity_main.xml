@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Books Details"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textColor="#E91E63" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:id="@+id/tv_title"
+        android:textColor="#2196F3" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Author"
+        android:textSize="40sp"
+        android:id="@+id/tv_author"
+        android:gravity="center"
+        android:textColor="#4CAF50" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="40sp"
+        android:id="@+id/tv_description"
+        android:gravity="center"
+        android:textColor="#FFEB3B" />
+
+</LinearLayout>
